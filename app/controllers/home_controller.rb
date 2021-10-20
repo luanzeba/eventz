@@ -1,5 +1,6 @@
 class HomeController < ApplicationController
   def index
-    @name = "Luan"
+    flash.now[:notice] = "Welcome to the Sample App!"
+    flash.now[:alert] = "Something went wrong"
   end
 end
