@@ -146,6 +146,7 @@ GEM
     regexp_parser (2.1.1)
     reline (0.2.7)
       io-console (~> 0.5)
+    rexml (3.2.5)
     rubyzip (2.3.2)
     selenium-webdriver (3.142.7)
       childprocess (>= 0.5, < 4.0)
@@ -194,6 +195,7 @@ DEPENDENCIES
   puma (~> 5.0)
   rails (~> 7.0.0.alpha2)
   redis (~> 4.0)
+  rexml
   selenium-webdriver
   stimulus-rails (>= 0.4.0)
   turbo-rails (>= 0.7.11)
