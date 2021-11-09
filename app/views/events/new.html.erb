@@ -1,9 +1,7 @@
 <h1>New event</h1>
 
-<%= render "form", event: @event %>
+<%= render "form", event: @event, submit_text: "Create Event" %>
 
-<br>
-
-<div>
-  <%= link_to "Back to events", events_path %>
+<div class="mt-6">
+  <%= link_to "🔙 Events", events_path, class: "hover:underline"%>
 </div>

@@ -1,10 +1,11 @@
-<h1>Editing event</h1>
+<h1 class="text-lg leading-6 font-medium text-gray-900">Editing event</h1>
 
-<%= render "form", event: @event %>
+<%= render "form", event: @event, submit_text: "Update Event" %>
 
-<br>
+<div class="mt-6">
+  <%= link_to "👀 Show this event", @event, class: "hover:underline" %>
+</div>
 
-<div>
-  <%= link_to "Show this event", @event %> |
-  <%= link_to "Back to events", events_path %>
+<div class="mt-2">
+  <%= link_to "🔙 Events", events_path, class: "hover:underline"%>
 </div>
