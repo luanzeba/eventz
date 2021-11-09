@@ -1,3 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@import "components/buttons";
+@import "components/forms";
+
+.month, .day, .year, .hour, .minute, .second {
+  @apply focus:ring-indigo-500 focus:border-indigo-500 relative block rounded-none rounded-t-md bg-transparent focus:z-10 sm:text-sm border-gray-300
+}

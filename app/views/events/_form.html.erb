@@ -1,4 +1,4 @@
-<%= form_with(model: event, class: "space-y-6") do |form| %>
+<%= form_with(model: event, builder: TailwindFormBuilder, class: "space-y-6") do |form| %>
   <% if event.errors.any? %>
     <div id="error_explanation" class="rounded-md bg-red-50 p-4 mt-4" role="alert">
       <h2><%= pluralize(event.errors.count, "error") %> prohibited this event from being saved:</h2>
