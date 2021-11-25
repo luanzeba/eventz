@@ -1,15 +1,17 @@
-<div id="<%= dom_id user %>" class="scaffold_record">
-  <p>
-    <strong>Name:</strong>
-    <%= user.name %>
-  </p>
+<li class="flex col-span-1 bg-white rounded-lg shadow">
+  <div class="w-full flex items-center justify-between p-6 space-x-6">
+  <a href=<%= url_for(user) %> class="">
+    <div class="flex-1 truncate">
+      <div class="flex items-center space-x-3">
+        <h3 class="text-gray-900 text-sm font-medium truncate"><%= user.name %></h3>
+      </div>
+      <p class="mt-1 text-gray-500 text-sm truncate"><%= user.email %></p>
+    </div>
+  </a>
+    <div class="space-y-4">
+      <%= button_to "Edit", edit_user_path(user), method: :get, class: "relative flex-shrink-0 h-8 w-20 items-center border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" %>
+      <%= button_to "Delete", user_path(user), method: :delete, class: "relative flex-shink-0 h-8 w-20 items-center border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-red-600 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500" %>
+    </div>
+  </div>
+</li>
 
-  <p>
-    <strong>Email:</strong>
-    <%= user.email %>
-  </p>
-
-  <p>
-    <%= link_to "Show this user", user %>
-  </p>
-</div>
