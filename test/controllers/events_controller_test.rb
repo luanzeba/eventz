@@ -20,7 +20,7 @@ class EventsControllerTest < ActionDispatch::IntegrationTest
       post events_url, params: { event: { description: @event.description, start_time: @event.start_time, title: @event.title } }
     end
 
-    assert_redirected_to event_url(Event.last)
+    assert_redirected_to events_url
   end
 
   test "should show event" do

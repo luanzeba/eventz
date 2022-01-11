@@ -1,3 +1,5 @@
+<%= turbo_stream_from 'events' %>
+
 <div class="bg-white px-4 py-5 border-b border-gray-200 sm:px-6">
   <div class="-ml-4 -mt-4 flex justify-between items-center flex-wrap sm:flex-nowrap">
     <div class="ml-4 mt-4">
@@ -11,7 +13,11 @@
   </div>
 </div>
 
-<ul id="events" role="list" class="mt-6 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-  <%= render @events %>
+<ul id="events" role="list">
+  <%= turbo_frame_tag 'events' do %>
+    <div class="mt-6 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      <%= render @events %>
+    </div>
+  <% end %>
 </ul>
 
