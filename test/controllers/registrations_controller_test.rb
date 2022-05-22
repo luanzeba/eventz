@@ -32,4 +32,14 @@ class RegistrationsControllerTest < ActionDispatch::IntegrationTest
     assert_equal "Invalid email or event", flash[:alert]
     assert_redirected_to events_url
   end
+
+  test "should handle invalid registration" do
+    post registrations_url, params: {registration: {user_id: @user.id, event_id: @event.id}}
+    assert_no_difference("Registration.count") do
+      post registrations_url, params: {registration: {user_id: @user.id, event_id: @event.id}}
+    end
+
+    assert_equal "User has already registered for this event", flash[:alert]
+    assert_redirected_to event_url(@event)
+  end
 end
