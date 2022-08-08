@@ -1,6 +1,6 @@
 # Eventz - a sample Ruby on Rails app
 
-This is a toy Ruby on Rails application created as part of the Level Up Tutorials beginner Ruby on Rails course. I will add a link to that course once it's available.
+This is a toy Ruby on Rails application created as part of the Level Up Tutorials beginner Ruby on Rails course https://leveluptutorials.com/tutorials/beginner-ruby-on-rails
 
 You can find the app at https://eventzzzz.herokuapp.com/.
 
